@@ -4,14 +4,31 @@
   "metadata": {
     "version": "2.0.0",
     "description": "project 级资源注册表",
-    "createdAt": "2025-06-27T10:24:38.358Z",
-    "updatedAt": "2025-06-27T10:24:38.363Z",
+    "createdAt": "2025-06-29T09:38:13.801Z",
+    "updatedAt": "2025-06-29T09:38:13.806Z",
     "resourceCount": 0
   },
-  "resources": [],
+  "resources": [
+    {
+      "id": "xiaoti",
+      "protocol": "role",
+      "source": "project",
+      "path": "domain/xiaoti.role.md",
+      "metadata": {
+        "name": "小提",
+        "description": "Git 提交信息生成助手，基于暂存区变更生成规范的中文提交信息",
+        "tags": ["git", "commit", "chinese", "conventional-commits"],
+        "createdAt": "2025-06-29T09:45:00.000Z"
+      }
+    }
+  ],
   "stats": {
-    "totalResources": 0,
-    "byProtocol": {},
-    "bySource": {}
+    "totalResources": 1,
+    "byProtocol": {
+      "role": 1
+    },
+    "bySource": {
+      "project": 1
+    }
   }
 }

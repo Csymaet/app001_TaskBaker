@@ -1,0 +1,188 @@
+/* 任务管理页面样式 */
+.task-manager {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 工具栏 */
+.task-manager__toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.task-manager__filters {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.filter-select {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  background: white;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.1);
+}
+
+/* 统计面板 */
+.task-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.stat-item {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--gray-200);
+  transition: transform 0.2s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-2px);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+/* 四象限网格 */
+.quadrant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.quadrant {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--gray-200);
+  min-height: 400px;
+}
+
+.quadrant__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--gray-100);
+  text-align: center;
+}
+
+.quadrant--urgent-important .quadrant__title {
+  color: var(--urgent-important);
+  border-bottom-color: var(--urgent-important);
+}
+
+.quadrant--not-urgent-important .quadrant__title {
+  color: var(--not-urgent-important);
+  border-bottom-color: var(--not-urgent-important);
+}
+
+.quadrant--urgent-not-important .quadrant__title {
+  color: var(--urgent-not-important);
+  border-bottom-color: var(--urgent-not-important);
+}
+
+.quadrant--not-urgent-not-important .quadrant__title {
+  color: var(--not-urgent-not-important);
+  border-bottom-color: var(--not-urgent-not-important);
+}
+
+.quadrant__tasks {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+/* 空状态 */
+.empty-state {
+  text-align: center;
+  color: var(--gray-400);
+  font-style: italic;
+  padding: var(--spacing-xl);
+  border: 2px dashed var(--gray-200);
+  border-radius: var(--border-radius);
+  margin: var(--spacing-md) 0;
+}
+
+/* 欢迎消息 */
+.welcome-message {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--gray-200);
+}
+
+.welcome-message h2 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+}
+
+.welcome-message p {
+  color: var(--gray-600);
+  margin-bottom: var(--spacing-xl);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .quadrant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .task-manager__toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .task-manager__filters {
+    justify-content: center;
+  }
+  
+  .task-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .quadrant-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .quadrant {
+    min-height: 300px;
+  }
+}

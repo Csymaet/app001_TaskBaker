@@ -1,0 +1,310 @@
+# 📁 TaskBaker .gitignore
+# Monorepo项目的完整Git忽略配置
+
+# ========================
+# 🚫 Node.js 相关
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# npm包锁定文件 (保留package-lock.json，忽略其他)
+yarn.lock
+pnpm-lock.yaml
+
+# ========================
+# 🏗️ 构建输出目录
+# ========================
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+
+# 各子项目的构建输出
+frontend/dist/
+frontend/build/
+backend/dist/
+backend/build/
+shared/dist/
+mobile/www/
+mobile/dist/
+desktop/dist/
+
+# ========================
+# 🔧 开发工具缓存
+# ========================
+.vite/
+.turbo/
+.parcel-cache/
+.rollup.cache/
+.webpack-cache/
+
+# TypeScript缓存
+*.tsbuildinfo
+.tsbuildinfo
+
+# ESLint缓存
+.eslintcache
+
+# Prettier缓存
+.prettiercache
+
+# ========================
+# 📝 编辑器和IDE
+# ========================
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+!.vscode/recommended-extensions.json
+
+# WebStorm/IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# ========================
+# 🔒 环境变量和配置
+# ========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 数据库文件
+*.db
+*.sqlite
+*.sqlite3
+
+# ========================
+# 📱 移动端开发 (Capacitor)
+# ========================
+# iOS
+mobile/ios/App/Pods/
+mobile/ios/App/public/
+mobile/ios/App/Podfile.lock
+mobile/ios/build/
+mobile/ios/DerivedData/
+
+# Android
+mobile/android/app/build/
+mobile/android/build/
+mobile/android/.gradle/
+mobile/android/local.properties
+mobile/android/gradle.properties
+mobile/android/key.properties
+
+# Capacitor
+mobile/capacitor.config.json
+
+# ========================
+# 🖥️ 桌面端开发 (Electron)
+# ========================
+desktop/out/
+desktop/app/
+desktop/*.dmg
+desktop/*.exe
+desktop/*.deb
+desktop/*.rpm
+desktop/*.zip
+
+# ========================
+# 🧪 测试相关
+# ========================
+coverage/
+*.lcov
+.nyc_output/
+junit.xml
+test-results/
+
+# Jest
+.jest-cache/
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# ========================
+# 📊 分析和监控
+# ========================
+bundle-analyzer/
+.bundle-analyzer/
+stats.json
+lighthouse-report.html
+
+# Webpack Bundle Analyzer
+webpack-stats.json
+
+# ========================
+# 🔄 版本控制
+# ========================
+# 忽略临时文件
+*.tmp
+*.temp
+*.log
+
+# 忽略OS生成的文件
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ========================
+# ☁️ 云服务和部署
+# ========================
+# Vercel
+.vercel/
+
+# Netlify
+.netlify/
+
+# AWS
+.aws/
+
+# Docker
+Dockerfile.dev
+docker-compose.override.yml
+
+# ========================
+# 🎨 设计和资源
+# ========================
+# 大型设计文件
+*.psd
+*.ai
+*.sketch
+*.fig
+
+# 大型媒体文件(超过100MB)
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.webm
+
+# ========================
+# 📚 文档生成
+# ========================
+docs/build/
+docs/.docusaurus/
+.docusaurus/
+
+# Storybook
+storybook-static/
+
+# ========================
+# 🔐 安全和密钥
+# ========================
+# 私钥和证书
+*.key
+*.pem
+*.crt
+*.cer
+*.p12
+*.pfx
+
+# SSH密钥
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+
+# API密钥文件
+secrets.json
+credentials.json
+
+# ========================
+# 📦 包管理器特定
+# ========================
+# Rush
+common/deploy/
+common/temp/
+common/autoinstallers/**/node_modules/
+
+# Lerna
+.lerna-tmp/
+
+# ========================
+# ⚡ 性能和优化
+# ========================
+# 压缩文件
+*.gz
+*.br
+*.zip
+*.tar.gz
+
+# 大型依赖包(如果意外包含)
+*.tgz
+*.tar
+
+# ========================
+# 🚀 TaskBaker 项目特定
+# ========================
+# 用户数据文件
+user-data/
+tasks-backup/
+export/
+
+# 临时上传文件
+uploads/temp/
+
+# 本地配置覆盖
+config.local.json
+settings.local.json
+
+# 开发时的测试数据
+test-data/
+mock-data/
+
+# 构建脚本生成的文件
+version.json
+build-info.json
+
+# ========================
+# 📝 注释说明
+# ========================
+# 
+# 这个.gitignore文件专为TaskBaker项目设计
+# 包含了Monorepo、React、TypeScript、Node.js等技术栈的完整配置
+# 
+# 维护建议:
+# 1. 定期检查是否有新的临时文件需要忽略
+# 2. 团队新增工具时及时更新对应规则
+# 3. 保持注释的可读性，便于新成员理解
+# 

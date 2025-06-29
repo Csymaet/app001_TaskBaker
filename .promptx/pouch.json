@@ -1,5 +1,5 @@
 {
-  "currentState": "memory_saved",
+  "currentState": "role_activated_with_memory",
   "stateHistory": [
     {
       "from": "initial",
@@ -112,7 +112,81 @@
         "--tags",
         "TaskBaker 会议总结 技术决策 Unity开发者 产品经理 项目规划"
       ]
+    },
+    {
+      "from": "memory_saved",
+      "command": "init",
+      "timestamp": "2025-06-29T07:01:30.264Z",
+      "args": [
+        {
+          "workingDirectory": "/mnt/d/myfile/desktop/TestCardBox"
+        }
+      ]
+    },
+    {
+      "from": "initialized",
+      "command": "welcome",
+      "timestamp": "2025-06-29T07:01:39.853Z",
+      "args": []
+    },
+    {
+      "from": "role_discovery",
+      "command": "action",
+      "timestamp": "2025-06-29T07:02:12.129Z",
+      "args": [
+        "nuwa"
+      ]
+    },
+    {
+      "from": "role_activated_with_memory",
+      "command": "init",
+      "timestamp": "2025-06-29T09:34:44.398Z",
+      "args": [
+        {
+          "workingDirectory": "/mnt/d/myfile/desktop/001-projects/app/app001_TaskBaker"
+        }
+      ]
+    },
+    {
+      "from": "initialized",
+      "command": "welcome",
+      "timestamp": "2025-06-29T09:34:47.336Z",
+      "args": []
+    },
+    {
+      "from": "role_discovery",
+      "command": "action",
+      "timestamp": "2025-06-29T09:38:08.597Z",
+      "args": [
+        "xiaoti"
+      ]
+    },
+    {
+      "from": "role_activated_with_memory",
+      "command": "init",
+      "timestamp": "2025-06-29T09:38:13.783Z",
+      "args": [
+        {
+          "workingDirectory": "/mnt/d/myfile/desktop/001-projects/app/app001_TaskBaker"
+        }
+      ]
+    },
+    {
+      "from": "initialized",
+      "command": "action",
+      "timestamp": "2025-06-29T09:38:16.921Z",
+      "args": [
+        "xiaoti"
+      ]
+    },
+    {
+      "from": "role_activated_with_memory",
+      "command": "action",
+      "timestamp": "2025-06-29T09:38:39.482Z",
+      "args": [
+        "xiaoti"
+      ]
     }
   ],
-  "lastUpdated": "2025-06-27T12:24:59.635Z"
+  "lastUpdated": "2025-06-29T09:38:39.485Z"
 }

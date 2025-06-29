@@ -1,0 +1,41 @@
+{
+  "name": "taskbaker-monorepo",
+  "version": "1.0.0",
+  "description": "TaskBaker - 基于烘焙法的时间管理应用",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=frontend",
+    "preview": "npm run preview --workspace=frontend",
+    "type-check": "npm run type-check --workspace=frontend",
+    "lint": "npm run lint --workspace=frontend",
+    "test": "npm run test --workspace=frontend"
+  },
+  "workspaces": [
+    "frontend",
+    "backend",
+    "shared",
+    "mobile",
+    "desktop"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "prettier": "^3.0.0",
+    "eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "keywords": [
+    "time-management",
+    "task-management",
+    "productivity",
+    "react",
+    "typescript"
+  ],
+  "author": "TaskBaker Team",
+  "license": "MIT"
+}
